@@ -1,0 +1,32 @@
+.emoji_main{
+    width: 10%;
+    background:transparent;
+    margin-left: -20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.emojis_content{
+    display: none;
+    position: absolute;
+    padding: 0.25rem;
+    width: 150px;
+    height: 150px;
+    bottom:25px;
+    border-radius: 7px;
+    overflow-y: scroll;
+    background: #90a4ae;
+}
+.row{
+    display: flex;
+    margin-top: 40vh;
+}
+.emoji{
+    cursor: pointer;
+    margin: 0 .1rem;
+    user-select: none;
+}
+.emoji_btn{
+    cursor: pointer;
+    color:#00acc1 ;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link rel="stylesheet" href="../assets/css/jsemoji.css">
+    <title>JsEmoji</title>
+
+</head>
+<body>
+    <!-- Imortant to contain element in row class or you can contain it 
+         in your class which must have property display:flex
+    -->
+    <div class="row">
+       <input type="text">
+    </div>
+    <script src="../Jsemoji.js"></script>
+    <script>
+
+        // Setup JsEmoji
+        JsEmoji.set({
+            btn:'button',
+            btnText:'JS'
+        });
+
+        // Run JsEmoji
+        JsEmoji.start();
+        
+        //** Example **//
+        let input = document.querySelector('input[type="text"]'),
+            ul    = document.createElement('ul');
+
+        input.addEventListener('keyup' , (e) => {
+            if(e.which == 13){
+                let li = document.createElement('li');
+                li.textContent = e.target.value;
+                ul.appendChild(li);
+                document.body.appendChild(ul);
+            }
+        });
+
+    </script>
+</body>
+</html>

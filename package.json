@@ -1,0 +1,22 @@
+{
+  "name": "js_emojis",
+  "version": "1.0.0",
+  "description": "Very simple js library for adding emojis in your project",
+  "main": "Jsemoji.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robertguitar20/Jsemojis.git"
+  },
+  "author": "Robert Aslanyan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robertguitar20/Jsemojis/issues"
+  },
+  "homepage": "https://github.com/robertguitar20/Jsemojis#readme"
+}
