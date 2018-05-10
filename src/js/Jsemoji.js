@@ -144,38 +144,34 @@ const JsEmoji = () =>  {
 
     return {
        set(obj){  
-			try{
-				let _confKeys = Object.keys(CONFIG),
-					 _objKeys  = Object.keys(obj);
+		try{
+			let  _objKeys  = Object.keys(obj);
 
-				_objKeys.map(key1 => {
-					_confKeys.map(key2 => {
-						try{
-                            
-							if(CONFIG.hasOwnProperty(key1)){    
-								if(_isEqualTypes(CONFIG[key1] , CONFIG[key2])){
-									let _obj = Object.create(null);
-									_obj[key1] = obj[key1];
+			_objKeys.map(key1 => {
+					try{
 
-									Object.assign(CONFIG , _obj);
-								}
-								else 
-								  throw `Type of ${obj[key1]} not equls to CONIG type`
+						if(CONFIG.hasOwnProperty(key1)){    
+							if(obj(CONFIG[key1] , CONFIG[key2])){
+								let _obj = Object.create(null);
+								_obj[key1] = obj[key1];
+
+								Object.assign(CONFIG , _obj);
 							}
-							else
-								throw 'Inccorect object name';
-				
+							else 
+							  throw `Type of ${obj[key1]} not equls to CONIG type`
 						}
-						catch(e){
-							console.error(e);
-						}
-							
-					});
+						else
+							throw 'Inccorect object name';
+
+					}
+					catch(e){
+						console.error(e);
+
 				});
-			}
-			catch(e){
-				throw 'Error:Params Must be an object';
-			}
+			});
+		}
+		catch(e){throw 'Error:Params Must be an object';}
+			
         },
         start(){
             let insertAfter   = _select(CONFIG.el),
